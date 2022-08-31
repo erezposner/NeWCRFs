@@ -18,7 +18,7 @@ import os
 from newcrfs.simcol import get_model, serve_model
 
 
-FINAL_MODEL_PATH = '/home/nfrank/Documents/Projects/NeWCRFs/models/newcrfs_nyu/model-320000-best_abs_rel_0.02256.ckpt'
+FINAL_MODEL_PATH = ''
 MODEL = get_model(FINAL_MODEL_PATH)
 
 

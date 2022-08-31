@@ -63,7 +63,7 @@ def serve_model(model, image_path, post_process=True, final_sz=(475, 475)):
 
 
 if __name__ == '__main__':
-    model_path = '/home/nfrank/Documents/Projects/NeWCRFs/models/newcrfs_nyu/model-320000-best_abs_rel_0.02256.ckpt'
+    model_path = ''
     img_path = 'files/FrameBuffer_0000.png'
     model = get_model(model_path)
     depth = serve_model(model, img_path)
