@@ -8,17 +8,12 @@ This is a dummy example to illustrate how participants should format their predi
 Please direct questions to the discussion forum: https://www.synapse.org/#!Synapse:syn28548633/discussion/default
 """
 import numpy as np
-import glob
-from PIL import Image
-import torch
-from torchvision import transforms
-import os
 
 # PYTHONPATH=~/pycharm_tmp/NeWCRFs/newcrfs:~/pycharm_tmp/NeWCRFs/
-from newcrfs.simcol import get_model, serve_model
+from simcol import get_model, serve_model
 
 
-FINAL_MODEL_PATH = ''
+FINAL_MODEL_PATH = 'checkpoint/model-126000-best_abs_rel_0.01773.ckpt'
 MODEL = get_model(FINAL_MODEL_PATH)
 
 

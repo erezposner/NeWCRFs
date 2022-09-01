@@ -4,7 +4,6 @@ import torch.backends.cudnn as cudnn
 import os, sys
 import argparse
 import numpy as np
-from matplotlib import pyplot as plt
 from tqdm import tqdm
 
 from convert_to_cm import convert_to_cm

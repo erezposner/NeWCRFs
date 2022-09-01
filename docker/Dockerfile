@@ -12,10 +12,10 @@ RUN conda init bash && source ~/.bashrc && echo "conda activate base" >> ~/.bash
 # Copying the /code directory into /opt
 WORKDIR /opt
 COPY ./src /opt
+RUN apt-get update
+RUN apt-get install ffmpeg libsm6 libxext6  -y
 
 # # Running pip install to download required packages
-RUN conda env create -f environment.yml
-
-
+RUN conda env update --name base -f environment.yml
 # Setting the default code to run when a container is launced with this image.
 ENTRYPOINT [ "/bin/bash", "/opt/run.sh" ]

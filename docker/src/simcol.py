@@ -8,7 +8,7 @@ from torchvision import transforms
 import numpy as np
 import cv2
 
-from newcrfs.dataloaders.dataloader import ToTensor
+from dataloaders.dataloader import ToTensor
 from utils import post_process_depth, flip_lr
 from networks.NewCRFDepth import NewCRFDepth
 

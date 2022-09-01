@@ -1,12 +1,9 @@
 import torch
-import torch.nn as nn
-import torch.nn.utils as utils
 import torch.backends.cudnn as cudnn
 import torch.distributed as dist
 import torch.multiprocessing as mp
 
 import os, sys, time
-from telnetlib import IP
 import argparse
 import numpy as np
 from tqdm import tqdm
