@@ -57,12 +57,12 @@ pip install matplotlib, tqdm, tensorboardX, timm, mmcv
 ### Docker build and Run
 To build the docker your code directory should be in the same folder as the docker file in a sub folder names 'src' and then run the command
 ```
-docker build -t simcol .
+docker build -t simcol2022_task1_IntuitiveIL:v1 .
 ```
 
 To run the docker:
 ```
-nvidia-docker run --rm --name=simcol -it simcol
+nvidia-docker run --rm --name=simcol -it simcol2022_task1_IntuitiveIL:v1
 
 ```
 
