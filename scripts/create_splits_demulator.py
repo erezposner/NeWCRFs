@@ -18,13 +18,16 @@ def separate_train_validate_test(l,percentage):
 import glob
 from pathlib import Path
 
-path = '/mnt/data/GIVideoFrame/synthetic/demulator/Nov08_2022'
+path = '/mnt/data/GIVideoFrame/synthetic/demulator/Nov23_2022_no_texture_1'
 depthmaps, colors, poses, D, K = load_data_from_demulator_folder(path, number_of_point_clouds_to_plot=10, voxel_size=0.005)
 
 
 train_val_files_list = []
 test_files_list = []
 percentage = [0.7,0.2,0.1]
+print(f'len colors = {len(colors)}')
+print(f'len depths = {len(depthmaps)}')
+print(f'len poses = {len(poses)}')
 for i,_ in enumerate(depthmaps):
     # print(folder)
     # remove linebreak from a current name
