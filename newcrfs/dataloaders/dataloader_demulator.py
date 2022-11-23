@@ -13,8 +13,8 @@ import random
 os.environ["OPENCV_IO_ENABLE_OPENEXR"]="1"
 import cv2
 
-from newcrfs.img_utils.utils import TT_preprocess_multi_lvl_rgb
 from newcrfs.dataloaders.dataloader import ToTensor
+from newcrfs.img_utils.utils import TT_preprocess_multi_lvl_rgb
 from newcrfs.utils import DistributedSamplerNoEvenlyDivisible
 
 # max_max =  45000. / 255
