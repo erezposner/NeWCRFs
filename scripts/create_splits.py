@@ -14,7 +14,7 @@ def separate_train_validate(l,percentage=70):
     return l2,l3
 import glob
 from pathlib import Path
-data_path = Path('/home/eposner/Repositories/NeWCRFs_erez/NeWCRFs/Data')
+data_path = Path('/Data')
 
 
 train_val_files_list = []
@@ -38,11 +38,11 @@ for folder in data_path.rglob('Test'):
         test_files_list.append(str(rgbs[i]) + '\n')
 train, val = separate_train_validate(train_val_files_list, percentage=percentage)
 
-with open(r'data_splits/colsim_train_files_with_gt.txt', 'w') as fp:
+with open(r'../data_splits/colsim_train_files_with_gt.txt', 'w') as fp:
     fp.writelines(train)
-with open(r'data_splits/colsim_valid_files_with_gt.txt', 'w') as fp:
+with open(r'../data_splits/colsim_valid_files_with_gt.txt', 'w') as fp:
     fp.writelines(val)
-with open(r'data_splits/colsim_test_files_with_gt.txt', 'w') as fp:
+with open(r'../data_splits/colsim_test_files_with_gt.txt', 'w') as fp:
     fp.writelines(test_files_list)
 
 # with open(r'data_splits/splits_colsim.txt', 'r') as fp:

@@ -100,6 +100,9 @@ if sys.argv.__len__() == 2:
 else:
     args = parser.parse_args()
 
+if args.dataset == 'demulator':
+    from dataloaders.dataloader_demulator import DemulatorDataLoader
+
 if args.dataset == 'kitti' or args.dataset == 'nyu' or args.dataset == 'colsim':
     from dataloaders.dataloader import NewDataLoader
 elif args.dataset == 'kittipred':
@@ -272,9 +275,12 @@ def main_worker(gpu, ngpus_per_node, args):
         del checkpoint
 
     cudnn.benchmark = True
-
-    dataloader = NewDataLoader(args, 'train')
-    dataloader_eval = NewDataLoader(args, 'online_eval')
+    if args.dataset =='demulator':
+        dataloader = DemulatorDataLoader(args, 'train')
+        dataloader_eval = DemulatorDataLoader(args, 'online_eval')
+    else:
+        dataloader = NewDataLoader(args, 'train')
+        dataloader_eval = NewDataLoader(args, 'online_eval')
 
     # ===== Evaluation before training ======
     # model.eval()
