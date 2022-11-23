@@ -6,7 +6,7 @@ import argparse
 import numpy as np
 from tqdm import tqdm
 
-from newcrfs.convert_to_cm import convert_to_cm
+from convert_to_cm import convert_to_cm
 from utils import post_process_depth, flip_lr, compute_errors
 from networks.NewCRFDepth import NewCRFDepth
 

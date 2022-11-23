@@ -10,7 +10,7 @@ from tqdm import tqdm
 
 from tensorboardX import SummaryWriter
 
-from newcrfs.convert_to_cm import convert_to_cm
+from convert_to_cm import convert_to_cm
 from utils import post_process_depth, flip_lr, silog_loss, compute_errors, eval_metrics, \
     block_print, enable_print, normalize_result, inv_normalize, convert_arg_line_to_args
 from networks.NewCRFDepth import NewCRFDepth
