@@ -1,19 +1,16 @@
 import torch
-import torch.nn as nn
-import torch.nn.utils as utils
 import torch.backends.cudnn as cudnn
 import torch.distributed as dist
 import torch.multiprocessing as mp
 
 import os, sys, time
-from telnetlib import IP
 import argparse
 import numpy as np
 from tqdm import tqdm
 
 from tensorboardX import SummaryWriter
 
-from convert_to_cm import convert_to_cm
+from newcrfs.convert_to_cm import convert_to_cm
 from utils import post_process_depth, flip_lr, silog_loss, compute_errors, eval_metrics, \
     block_print, enable_print, normalize_result, inv_normalize, convert_arg_line_to_args
 from networks.NewCRFDepth import NewCRFDepth
