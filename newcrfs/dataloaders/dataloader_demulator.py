@@ -10,11 +10,10 @@ import random
 
 
 
-# from img_utils.utils import TT_preprocess_multi_lvl_rgb,TT_preprocess_multi_lvl
 os.environ["OPENCV_IO_ENABLE_OPENEXR"]="1"
 import cv2
 
-from img_utils.utils import TT_preprocess_multi_lvl_rgb
+from newcrfs.img_utils.utils import TT_preprocess_multi_lvl_rgb
 from newcrfs.dataloaders.dataloader import ToTensor
 from newcrfs.utils import DistributedSamplerNoEvenlyDivisible
 

@@ -10,7 +10,7 @@ import random
 
 from utils import DistributedSamplerNoEvenlyDivisible
 
-from img_utils.utils import TT_preprocess_multi_lvl_rgb,TT_preprocess_multi_lvl
+from newcrfs.img_utils.utils import TT_preprocess_multi_lvl_rgb
 
 
 # max_max =  45000. / 255
