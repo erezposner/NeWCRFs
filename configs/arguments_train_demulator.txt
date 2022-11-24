@@ -19,11 +19,10 @@
 --dist_url tcp://127.0.0.1:2345
 --log_freq 5000
 --do_online_eval
---eval_freq 20000
+--eval_freq 5000
 --data_path_eval Data
 --gt_path_eval Data
 --filenames_file_eval data_splits/Nov23_2022_no_texture_1_demulator_valid_files_with_gt.txt
---min_depth_eval 1e-3
+--min_depth_eval 1e-4
 --max_depth_eval 1
---eigen_crop
---experiment_name init_demulator_Nov23_2022_no_texture
+--experiment_name init_demulator_Nov23_2022_no_texture_no_eigen_crop
