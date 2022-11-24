@@ -7,7 +7,7 @@
 --gt_path Data
 --filenames_file data_splits/Nov23_2022_no_texture_1_demulator_train_files_with_gt.txt
 --batch_size 4
---num_epochs 5000
+--num_epochs 1250
 --learning_rate 2e-5
 --weight_decay 1e-2
 --adam_eps 1e-3
@@ -19,7 +19,7 @@
 --dist_url tcp://127.0.0.1:2345
 --log_freq 5000
 --do_online_eval
---eval_freq 5000
+--eval_freq 1250
 --data_path_eval Data
 --gt_path_eval Data
 --filenames_file_eval data_splits/Nov23_2022_no_texture_1_demulator_valid_files_with_gt.txt
