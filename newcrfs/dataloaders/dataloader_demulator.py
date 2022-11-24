@@ -239,10 +239,10 @@ class DemulatorDataLoadPreprocess(Dataset):
         image_aug = image_aug * brightness
 
         # color augmentation
-        colors = np.random.uniform(0.9, 1.1, size=3)
-        white = np.ones((image.shape[0], image.shape[1]))
-        color_image = np.stack([white * colors[i] for i in range(3)], axis=2)
-        image_aug *= color_image
+        # colors = np.random.uniform(0.9, 1.1, size=3)
+        # white = np.ones((image.shape[0], image.shape[1]))
+        # color_image = np.stack([white * colors[i] for i in range(3)], axis=2)
+        # image_aug *= color_image
         image_aug = np.clip(image_aug, 0, 1)
 
         return image_aug
